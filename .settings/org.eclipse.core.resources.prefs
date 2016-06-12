@@ -1,9 +1,12 @@
 eclipse.preferences.version=1
+encoding//src/class/__init__.py=utf-8
+encoding//src/class/car.py=utf-8
 encoding//src/detail/__init__.py=utf-8
 encoding//src/detail/bubblesort.py=utf-8
 encoding//src/detail/call_myModule.py=utf-8
 encoding//src/detail/datacontruct.py=utf-8
 encoding//src/detail/filetest.py=UTF8
+encoding//src/detail/func.py=utf-8
 encoding//src/detail/repTest.py=UTF8
 encoding//src/detail/stream.py=UTF8
 encoding//src/detail/stringoperation.py=UTF8
