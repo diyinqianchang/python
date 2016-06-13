@@ -5,9 +5,9 @@ Created on 2016年6月12号
 '''
 class Fruit:
     price = 0           #类属性
-    
     def __init__(self):
-        self.__color = 'red'    #实例属性
+#         self.color = 'red'   #实例属性
+        self.__color = 'red'   
         zone = "China"    #局部变量
         self.__weight = 120    #私有属性 instance._classname__attribute
         
