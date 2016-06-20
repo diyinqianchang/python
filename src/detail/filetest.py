@@ -12,15 +12,21 @@ Created on 2016��6��2��
 # f.close()
 #文件的读取
 
-# f = open("hello.txt",'r')
+# f = file("hello.txt",'r')
 # while True:
 #     line = f.readline()
 #     if line:
 #         print(line)
 #     else:
 #         break
-# 
+# print(f.next())
+# f.seek(0,0)
+# print(f.readlines())
+# print(f.tell())
 # f.close()
+# print(f.closed)
+# print(f.mode)
+# print(f.encoding)
 #     
 # f = file('hello.txt','r')
 # lines = f.readlines(1)  #一次可读取文件中多行数据
@@ -33,12 +39,33 @@ Created on 2016��6��2��
 # print(content)
 # f.close()
 
-# import os
+import os
 # 
 # file("hello.txt",'w')
-# if os.path.exists('hello.txt'):
-#     print('存在')
-# 
+path = 'hello.txt'
+if os.path.exists('hello.txt'):
+    print('存在')
+#     os.startfile('hello.txt','notepad')
+
+absp=os.path.abspath(path)
+print(absp.find('.'))
+print(absp)
+print(os.path.split(path))
+print(os.path.splitext(path))
+print(os.path.isfile('hello.txt'))
+print(os.path.isdir(path))
+# os.F_OK 
+# 作为access()的mode参数，测试path是否存在. 
+# os.R_OK 
+# 包含在access()的mode参数中 ， 测试path是否可读. 
+# os.W_OK 
+# 包含在access()的mode参数中 ，测试path是否可写. 
+# os.X_OK 
+# 包含在access()的mode参数中 ，测试path是否可执行.. 
+fl = os.access('hello.txt',os.F_OK)
+print(fl)
+
+
 # 
 # print(os.listdir('.'))   #返回目录下的所有文件
 # print(os.path.abspath('hello.txt'))   #返回文件的绝对路径
@@ -106,37 +133,37 @@ print(li)
 # print("配置项:",o)
 
 
-import os
+# import os
 # os.mkdir('hello')
 # os.rmdir('hello')
 
 # 文件遍历
 
-def VisitDir(path):
-    li = os.listdir(path)
-    for p in li:
-        pathname = os.path.join(path,p)
-        if not os.path.isfile(pathname):
-            VisitDir(pathname)
-        else:
-            print(pathname)
-            
-
-
-
-def VisitDir1(path):
-    for root,dirs,files in os.walk(path):
-        print('************')
-        print(dirs)#目录列表
-        print('************')
-        print(root) #路径名
-        print('************')
-        for filepath in files:  #files 文件列表
-            print os.path.join(root,filepath)
-    
-    
-path = r'C:\Users\Administrator\Desktop\Java\PythonDetail'
-VisitDir1(path)
+# def VisitDir(path):
+#     li = os.listdir(path)
+#     for p in li:
+#         pathname = os.path.join(path,p)
+#         if not os.path.isfile(pathname):
+#             VisitDir(pathname)
+#         else:
+#             print(pathname)
+#             
+# 
+# 
+# 
+# def VisitDir1(path):
+#     for root,dirs,files in os.walk(path):
+#         print('************')
+#         print(dirs)#目录列表
+#         print('************')
+#         print(root) #路径名
+#         print('************')
+#         for filepath in files:  #files 文件列表
+#             print os.path.join(root,filepath)
+#     
+#     
+# path = r'C:\Users\Administrator\Desktop\Java\PythonDetail'
+# VisitDir1(path)
 
 
 
