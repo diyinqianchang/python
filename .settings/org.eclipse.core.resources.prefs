@@ -19,5 +19,6 @@ encoding//src/detail/stringoperation.py=UTF8
 encoding//src/threadtest/__init__.py=utf-8
 encoding//src/threadtest/thread_1.py=utf-8
 encoding//src/threadtest/thread_2.py=utf-8
+encoding//src/threadtest/threadconncetin.py=utf-8
 encoding//src/threadtest/threadmanage.py=utf-8
 encoding//src/threadtest/threadsecurity.py=utf-8
